@@ -5,7 +5,6 @@ const countryInput = document.querySelector("#countryInput");
 const description = document.querySelector("#description");
 const borderList = document.querySelector("#borderList");
 const toastContainer = document.querySelector(".toast");
-
 const region = document.querySelector(".region");
 
 function getCountryData() {
@@ -15,7 +14,7 @@ function getCountryData() {
     })
     .then((response) => {
       const [country] = response;
-      console.log(country, "==>> country");
+      // console.log(country, "==>> country");
       const { name, flags, borders, population, capital, continents } = country;
       flagImg.src = flags.png;
       cardTitle.innerHTML = name.common;
@@ -25,7 +24,7 @@ function getCountryData() {
         const bordersHtml = borders.map((border) => {
           return `<li class="list-group-item">${border}</li>`;
         });
-        console.log(bordersHtml.join(""), "==>> bordersHtml");
+        // console.log(bordersHtml.join(""), "==>> bordersHtml");
         borderList.innerHTML = bordersHtml.join("");
       } else {
         borderList.innerHTML = ``;
