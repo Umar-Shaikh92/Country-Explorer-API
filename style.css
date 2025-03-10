@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&family=Cookie&family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+  box-sizing: content-box;
+}
+
+body {
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 100px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+body h1 {
+  font-family: "Rancho", serif;
+  text-align: center;
+  font-size: 50px;
+  padding-block: 30px;
+}
+
+.toast {
+  position: absolute;
+  top: 5%;
+  z-index: 100;
+}
+
+.toast .toastWrapper {
+  background-color: #ff3535;
+}
+
+.toast .toastWrapper strong {
+  font-family: "Rancho", serif;
+  font-size: 18px;
+}
+
+.toast .toastWrapper img {
+  width: 30px;
+  height: auto;
+}
+
+.wrapper .searchSection #countryInput {
+  border: 1px solid black;
+  border-radius: 5px;
+  max-width: 30rem;
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  background-image: url(./search-icon.webp);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 30px;
+  border-top-right-radius: 46px;
+}
+
+.wrapper .searchSection #submitBtn {
+  border: 1px solid black;
+  padding: 10px 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  border-bottom-left-radius: 46px;
+}
+
+.wrapper .searchSection #submitBtn:hover {
+  background-color: #7cccc4;
+  transition: 0.3s ease all;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.wrapper .searchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+  .wrapper .searchSection {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wrapper .searchSection #submitBtn {
+    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .wrapper .searchSection #countryInput {
+    max-width: 285px;
+    border-top-right-radius: 5px;
+  }
+}
